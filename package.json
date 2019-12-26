@@ -1,0 +1,36 @@
+{
+  "name": "discord-radio",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.ts --extensions \".ts\"",
+    "build": "babel src --extensions \".ts\" --out-dir build",
+    "run": "node build/index.js",
+    "prettier": "prettier --write \"./**/*.ts\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-macros": "^2.7.1",
+    "chalk": "^2.4.2",
+    "dotenv": "^8.2.0",
+    "husky": "^3.0.9",
+    "nodemon": "^2.0.1",
+    "typescript": "^3.7.0"
+  },
+  "lint-staged": {
+    "*.(tsx?|json)": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "author": "Leroy Korterink <lkorterink@outlook.com> (https://leroy.dev)",
+  "license": "GNU AGPLv3"
+}
